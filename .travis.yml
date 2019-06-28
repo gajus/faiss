@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - node
+after_success:
+  - NODE_ENV=production npm run build
+  - semantic-release
+notifications:
+  email: false
+sudo: false
